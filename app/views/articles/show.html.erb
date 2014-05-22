@@ -1,0 +1,15 @@
+<div>
+  <h1>Title: <%= @article.title %></h1>
+</div>
+
+<div>
+  <p>
+    <%= @article.body %>
+  </p>
+</div>
+
+<%= link_to "All articles", articles_path %> |
+<%= link_to "Edit article", edit_article_path(@article.id) %> |
+<%= link_to "Delete article", articles_path %>
+
+
