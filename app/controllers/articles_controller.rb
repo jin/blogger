@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  include ArticlesHelper
+
   def index
     @articles = Article.all 
     @page_title = "All articles"
@@ -14,9 +16,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new
-    @article.title, @article.body = params[:article][:title], params[:article][:body]
-    @article.save!
+    @article = Article.create(article_params)
     redirect_to article_path(@article.id)
   end
 
