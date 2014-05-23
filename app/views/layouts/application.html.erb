@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blogger</title>
+    <title>Blogger | <%= @page_title %></title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag "//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", :cache => true %>
     <%= stylesheet_link_tag "//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css", :cache => true %>
@@ -9,15 +9,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Blogger</a>
-        </div>
-        
-      </div>
-      
-    </nav>
+    <%= render partial: 'layouts/navbar' %>
     <div class="container">
       <%= yield %>
     </div>
