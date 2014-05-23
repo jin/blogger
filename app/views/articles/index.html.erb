@@ -3,9 +3,10 @@
 </div>
 
 <div>
-  <ul>
+  <ul class="fa-ul">
     <% @articles.each do |article| %>
       <li>
+        <i class="fa-li fa fa-square"></i>
         <%= link_to article.title, article_path(article.id) %>
       </li>
     <% end %>
