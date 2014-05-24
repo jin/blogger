@@ -11,7 +11,10 @@
   <body>
     <%= render partial: 'layouts/navbar' %>
     <div class="container">
-      <%= yield %>
+      <div class="row">
+        <div class="col-xs-12 col-md-8"> <%= yield %> </div>
+        <div class="col-xs-6 col-md-4"></div>
+      </div>
     </div>
   </body>
 </html>

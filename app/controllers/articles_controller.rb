@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new 
+    @page_title = "Create a new article"
   end
 
   def edit
