@@ -1,5 +1,8 @@
 <div>
   <h1><%= @article.title %></h1>
+  <div class="small text-right">
+    Posted <%= distance_of_time_in_words(@article.created_at, Time.now) %> ago
+  </div>
 </div>
 
 <div>
@@ -11,3 +14,8 @@
 <%= link_to "All articles", articles_path %> |
 <%= link_to "Edit article", edit_article_path(@article.id) %> |
 <%= link_to "Delete article", article_path(@article.id), method: :delete, data: {confirm: "Really delete?"} %>
+
+<h4>Comments (<%= @article.comments.size %>)</h4>
+<%= render :partial => 'articles/comment', collection: @article.comments %>
+
+<%= render :partial => 'comments/form' %>
