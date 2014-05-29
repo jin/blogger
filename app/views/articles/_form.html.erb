@@ -13,6 +13,10 @@
     <%= f.text_area :body, rows: 10, class: "form-control" %>
   </p>
   <p>
+    <%= f.label :tag_list, 'Tags' %>
+    <%= f.text_field :tag_list, class: "form-control" %>
+  </p>
+  <p>
     <%= f.submit "Submit" %>
   </p>
 <% end %>

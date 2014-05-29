@@ -3,6 +3,13 @@
   <div class="small text-right">
     Posted <%= distance_of_time_in_words(@article.created_at, Time.now) %> ago
   </div>
+
+  <div>
+    Tagged:
+    <% @article.tags.each do |tag|  %>
+      <%= link_to tag.name, tag_path(tag) %>
+    <% end %>
+  </div>
 </div>
 
 <div>
